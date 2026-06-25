@@ -1,101 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huzaifah Hidayat</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huzaifah Hidayat | Tech Profile</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .container {
-            background: white;
-            width: 90%;
-            max-width: 500px;
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background:#0d1117;
+    color:white;
+    overflow-x:hidden;
+}
 
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: #4facfe;
-            color: white;
-            font-size: 50px;
-            font-weight: bold;
-            line-height: 120px;
-            margin: 0 auto 20px;
-        }
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        linear-gradient(rgba(0,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,.05) 1px, transparent 1px);
+    background-size:40px 40px;
+    z-index:-1;
+}
 
-        h1 {
-            margin: 10px 0;
-            color: #333;
-        }
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:50px 20px;
+}
 
-        p {
-            color: #666;
-        }
+.hero{
+    text-align:center;
+    padding:40px;
+    border:1px solid rgba(0,255,255,.3);
+    border-radius:20px;
+    background:rgba(255,255,255,.03);
+    backdrop-filter:blur(10px);
+}
 
-        .hobbies {
-            margin: 20px 0;
-        }
+.avatar{
+    width:140px;
+    height:140px;
+    margin:auto;
+    border-radius:50%;
+    border:3px solid #00ffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+    font-weight:bold;
+    color:#00ffff;
+    margin-bottom:20px;
+    box-shadow:0 0 25px #00ffff;
+}
 
-        .tag {
-            display: inline-block;
-            background: #4facfe;
-            color: white;
-            padding: 8px 14px;
-            margin: 5px;
-            border-radius: 20px;
-        }
+h1{
+    font-size:3rem;
+    color:#00ffff;
+}
 
-        .button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 20px;
-            background: #1877f2;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-        }
+.subtitle{
+    margin-top:10px;
+    color:#a0a0a0;
+}
 
-        .button:hover {
-            opacity: 0.9;
-        }
-    </style>
+.section{
+    margin-top:30px;
+    padding:25px;
+    border-radius:15px;
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.section h2{
+    color:#00ffff;
+    margin-bottom:15px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tag{
+    padding:10px 16px;
+    border-radius:30px;
+    background:#00ffff20;
+    border:1px solid #00ffff60;
+}
+
+.social{
+    text-align:center;
+    margin-top:30px;
+}
+
+.social a{
+    display:inline-block;
+    padding:12px 24px;
+    background:#00ffff;
+    color:#000;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.social a:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px #00ffff;
+}
+
+.footer{
+    text-align:center;
+    margin-top:40px;
+    color:#888;
+}
+</style>
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
+
+    <div class="hero">
         <div class="avatar">H</div>
 
         <h1>Huzaifah Hidayat</h1>
 
-        <p><strong>About Me</strong></p>
-        <p>I am just a simple man.</p>
+        <p class="subtitle">
+            Technology Enthusiast • Gamer • Lifelong Learner
+        </p>
+    </div>
 
-        <div class="hobbies">
-            <h3>My Hobbies</h3>
-            <span class="tag">🎮 Online Games</span>
-            <span class="tag">🕹️ Offline Games</span>
-            <span class="tag">🎉 Anything Fun</span>
+    <div class="section">
+        <h2>👨 About Me</h2>
+        <p>
+            I am just a simple man who enjoys technology, learning new things,
+            and spending time with fun activities. I love exploring both online
+            and offline games and discovering interesting challenges.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>💼 Work</h2>
+        <p>
+            Universitas Pertahanan RI
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>🎮 Hobbies</h2>
+
+        <div class="tags">
+            <div class="tag">Online Gaming</div>
+            <div class="tag">Offline Gaming</div>
+            <div class="tag">Technology</div>
+            <div class="tag">Fun Activities</div>
+            <div class="tag">Learning New Things</div>
         </div>
+    </div>
 
-        <a class="button" href="https://facebook.com/huzaifah" target="_blank">
-            Facebook
+    <div class="social">
+        <a href="https://facebook.com/huzaifah" target="_blank">
+            Facebook Profile
         </a>
     </div>
+
+    <div class="footer">
+        © 2026 Huzaifah Hidayat | Powered by GitHub Pages
+    </div>
+
+</div>
 
 </body>
 </html>
