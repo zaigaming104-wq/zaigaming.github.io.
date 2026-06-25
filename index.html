@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Huzaifah Hidayat | Tech Profile</title>
+<title>Huzaifah Hidayat | Future Profile</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -13,168 +15,219 @@
 }
 
 body{
-    font-family: 'Segoe UI', sans-serif;
-    background:#0d1117;
+    font-family:'Orbitron',sans-serif;
+    background:#050816;
     color:white;
     overflow-x:hidden;
 }
 
+/* Animated Background */
 body::before{
     content:"";
     position:fixed;
     inset:0;
     background:
-        linear-gradient(rgba(0,255,255,.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,255,255,.05) 1px, transparent 1px);
+    radial-gradient(circle at 20% 20%, #00ffff22, transparent 20%),
+    radial-gradient(circle at 80% 80%, #ff00ff22, transparent 20%),
+    radial-gradient(circle at 50% 50%, #00ff8822, transparent 30%);
+    animation: pulse 8s infinite alternate;
+    z-index:-2;
+}
+
+@keyframes pulse{
+    from{transform:scale(1);}
+    to{transform:scale(1.2);}
+}
+
+.grid{
+    position:fixed;
+    inset:0;
+    background-image:
+    linear-gradient(rgba(0,255,255,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,.08) 1px, transparent 1px);
     background-size:40px 40px;
     z-index:-1;
 }
 
 .container{
-    max-width:900px;
+    max-width:1000px;
     margin:auto;
     padding:50px 20px;
 }
 
+/* Hero */
 .hero{
     text-align:center;
-    padding:40px;
+    padding:50px;
     border:1px solid rgba(0,255,255,.3);
-    border-radius:20px;
     background:rgba(255,255,255,.03);
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    box-shadow:0 0 40px rgba(0,255,255,.2);
 }
 
 .avatar{
-    width:140px;
-    height:140px;
-    margin:auto;
+    width:160px;
+    height:160px;
     border-radius:50%;
+    margin:auto;
     border:3px solid #00ffff;
     display:flex;
-    align-items:center;
     justify-content:center;
-    font-size:60px;
-    font-weight:bold;
+    align-items:center;
+    font-size:70px;
     color:#00ffff;
-    margin-bottom:20px;
-    box-shadow:0 0 25px #00ffff;
+    box-shadow:
+        0 0 15px #00ffff,
+        0 0 40px #00ffff;
 }
 
 h1{
+    margin-top:20px;
     font-size:3rem;
     color:#00ffff;
+    text-shadow:0 0 20px #00ffff;
 }
 
 .subtitle{
     margin-top:10px;
-    color:#a0a0a0;
+    color:#c7d2fe;
 }
 
-.section{
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
     margin-top:30px;
-    padding:25px;
-    border-radius:15px;
-    background:rgba(255,255,255,.03);
-    border:1px solid rgba(255,255,255,.1);
 }
 
-.section h2{
+.card{
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(0,255,255,.25);
+}
+
+.card h2{
     color:#00ffff;
     margin-bottom:15px;
 }
 
-.tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.tag{
-    padding:10px 16px;
-    border-radius:30px;
-    background:#00ffff20;
-    border:1px solid #00ffff60;
-}
-
-.social{
-    text-align:center;
-    margin-top:30px;
-}
-
-.social a{
+/* Skills */
+.skill{
     display:inline-block;
-    padding:12px 24px;
-    background:#00ffff;
-    color:#000;
+    padding:10px 16px;
+    margin:5px;
+    border-radius:25px;
+    background:rgba(0,255,255,.12);
+    border:1px solid rgba(0,255,255,.3);
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 30px;
+    border-radius:12px;
     text-decoration:none;
-    border-radius:10px;
+    color:black;
+    background:#00ffff;
     font-weight:bold;
-    transition:0.3s;
+    transition:.3s;
 }
 
-.social a:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 20px #00ffff;
+.btn:hover{
+    box-shadow:0 0 25px #00ffff;
 }
 
+/* Footer */
 .footer{
     text-align:center;
-    margin-top:40px;
-    color:#888;
+    margin-top:50px;
+    color:#8892b0;
+    font-size:14px;
+}
+
+/* Status Panel */
+.status{
+    color:#00ff88;
+    margin-top:15px;
+    font-size:14px;
 }
 </style>
 </head>
 <body>
 
+<div class="grid"></div>
+
 <div class="container">
 
-    <div class="hero">
+    <section class="hero">
         <div class="avatar">H</div>
 
-        <h1>Huzaifah Hidayat</h1>
+        <h1>HUZAIFAH HIDAYAT</h1>
 
         <p class="subtitle">
-            Technology Enthusiast • Gamer • Lifelong Learner
+            Future Technology Explorer • Gamer • Digital Enthusiast
         </p>
-    </div>
 
-    <div class="section">
-        <h2>👨 About Me</h2>
-        <p>
-            I am just a simple man who enjoys technology, learning new things,
-            and spending time with fun activities. I love exploring both online
-            and offline games and discovering interesting challenges.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>💼 Work</h2>
-        <p>
-            Universitas Pertahanan RI
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>🎮 Hobbies</h2>
-
-        <div class="tags">
-            <div class="tag">Online Gaming</div>
-            <div class="tag">Offline Gaming</div>
-            <div class="tag">Technology</div>
-            <div class="tag">Fun Activities</div>
-            <div class="tag">Learning New Things</div>
+        <div class="status">
+            ● SYSTEM ONLINE
         </div>
-    </div>
 
-    <div class="social">
-        <a href="https://facebook.com/huzaifah" target="_blank">
-            Facebook Profile
+        <a href="https://facebook.com/huzaifah" class="btn" target="_blank">
+            CONNECT
         </a>
+    </section>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>👤 ABOUT</h2>
+            <p>
+                I am just a simple man who enjoys technology,
+                innovation, gaming, and discovering new experiences.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>💼 WORK</h2>
+            <p>
+                Universitas Pertahanan RI
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>🎮 HOBBIES</h2>
+
+            <span class="skill">Online Games</span>
+            <span class="skill">Offline Games</span>
+            <span class="skill">Technology</span>
+            <span class="skill">AI</span>
+            <span class="skill">Fun Activities</span>
+        </div>
+
+        <div class="card">
+            <h2>🚀 INTERESTS</h2>
+            <p>
+                Cyber Technology, Gaming,
+                Digital Innovation, Future Trends,
+                and Continuous Learning.
+            </p>
+        </div>
+
     </div>
 
     <div class="footer">
-        © 2026 Huzaifah Hidayat | Powered by GitHub Pages
+        © 2026 Huzaifah Hidayat • Future Profile Interface v1.0
     </div>
 
 </div>
